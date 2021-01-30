@@ -53,7 +53,7 @@
                 <div class="input-group f-class">
                     <div>
                         <label for="">First Class ($150)</label>
-                        <input id="first-class-ticket" class="inp-style inp-width" type="number" name="" value="0">
+                        <input id="firstClass-ticket" class="inp-style inp-width" type="number" name="" value="0">
                     </div>
                     <div class="plus-minus-btn">
                         <p><button id="plusButton-1" class="plus-minus-btn">+</button> <button id="minusButton-1" class="plus-minus-btn">-</button></p>
@@ -63,7 +63,7 @@
                 <div class="input-group f-class">
                     <div>
                         <label for="">Economy ($100)</label>
-                        <input id="economic-class-ticket" class="inp-style inp-width" type="number" name="" value="0">
+                        <input id="economicClass-ticket" class="inp-style inp-width" type="number" name="" value="0">
                     </div>
                     <div class="plus-minus-btn">
                         <p> <button id="plusButton-2" class="plus-minus-btn">+</button> <button class="plus-minus-btn" id="minusButton-2">-</button> </p>
@@ -113,17 +113,17 @@
 
     <script>
         document.getElementById("plusButton-1").addEventListener("click",function(){
-                updateTicketNumber("first-class-ticket",+1);
+                updateTicketNumber("firstClass-ticket",+1);
         });
         document.getElementById("minusButton-1").addEventListener("click",function(){
-                updateTicketNumber("first-class-ticket",-1)
+                updateTicketNumber("firstClass-ticket",-1)
         });
         document.getElementById("plusButton-2").addEventListener("click",function(){
-                updateTicketNumber("economic-class-ticket",+1)
+                updateTicketNumber("economicClass-ticket",+1)
 
         });
         document.getElementById("minusButton-2").addEventListener("click",function(){
-                updateTicketNumber("economic-class-ticket",-1)
+                updateTicketNumber("economicClass-ticket",-1)
         });
 
         function updateTicketNumber(ticketId,alternative){
@@ -140,8 +140,8 @@
         }
 
         function Calculation(){
-            const totalFirstClassTicket = document.getElementById("first-class-ticket").value;
-            const totalEconomicClassTicket = document.getElementById("economic-class-ticket").value;
+            const totalFirstClassTicket = document.getElementById("firstClass-ticket").value;
+            const totalEconomicClassTicket = document.getElementById("economicClass-ticket").value;
 
             const subtotal = totalFirstClassTicket*150 + totalEconomicClassTicket*100;
             const tax = subtotal*0.1;
